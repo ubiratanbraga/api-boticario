@@ -1,0 +1,29 @@
+{
+    "name": "development",
+    "interface": "mysql",
+    "webserver": {
+        "redirect-https": false,
+        "version": 1.1
+    },
+    "logs": {
+        "active": false,
+        "interface": "elasticsearch",
+        "application": {
+            "level": "debug"
+        }
+    }, 
+    "auth": {        
+        "bypass_login": false,
+        "bypass_platform": false,
+        "cpf" : "15350946056",
+        "jwt_secret":"gIYDuai0ZMiaNyn4C21ymubakiG9dfY2",
+        "salt": "yTrKaIFvo@dWD=u-0KoM>5fj |bx(o[$x412>YVXd}cJv+6+}Hdac[r;:TTd&6a^"
+    },
+    "cors": {
+        "origin":["*"],
+        "methods": ["GET","HEAD","PUT","PATCH","POST","DELETE"]
+    },
+    "cashback": {
+        
+    }
+}

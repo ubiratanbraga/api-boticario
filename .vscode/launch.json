@@ -1,0 +1,28 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [{
+            "type": "node",
+            "request": "launch",
+            "name": "api-boticario-dev",
+            "program": "${workspaceFolder}/bin/www",
+            "cwd": "${workspaceFolder}",
+            "outputCapture": "std",
+            "env": {
+                "NODE_ENV": "development"
+            }
+        },
+        {
+            "type": "node",
+            "request": "launch",
+            "name": "api-boticario-prod",
+            "program": "${workspaceFolder}/bin/www",
+            "outputCapture": "std",
+            "cwd": "${workspaceFolder}",
+            "env": {
+                "NODE_ENV": "production"
+            }
+        }]
+}

@@ -1,0 +1,23 @@
+{
+    "name": "production",
+    "interface": "mysql",
+    "webserver": {
+        "redirect-https": false,
+        "version": 1.1
+    },
+    "logs": {
+        "active": false,
+        "interface": "elasticsearch",
+        "application": {
+            "level": "debug"
+        }
+    }, 
+    "auth": {
+    },
+    "cors": {
+        "origin":["*"],
+        "methods": ["GET","HEAD","PUT","PATCH","POST","DELETE"]
+    },
+    "aws": {
+    }
+}

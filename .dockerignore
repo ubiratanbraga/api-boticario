@@ -1,0 +1,6 @@
+.dockerdata
+.vscode
+.git
+playground
+pm2.json
+readme.md

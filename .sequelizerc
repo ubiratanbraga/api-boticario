@@ -1,0 +1,8 @@
+const path = require('path');
+
+module.exports = {
+  'config': path.resolve('connections', 'migration.js'),
+  'models-path': path.resolve('interfaces', 'mysql/models'),
+  'seeders-path': path.resolve('seeders', 'mysql'),
+  'migrations-path': path.resolve('migrations', 'mysql')
+}

@@ -1,0 +1,18 @@
+{
+    "string.min": "O campo {{#label}} deve ter no mínimo {{#limit}} caracteres.",
+    "string.max": "O campo {{#label}} deve ter no máximo {{#limit}} caracteres.",
+    "string.email": "O campo {{#label}} deve ser válido.",
+    "string.alphanum": "O campo {{#label}} deve ter apenas caracteres alfa númericos.",
+    "string.base64": "O campo {{#label}} deve ser uma string base64 válida.",
+    "string.creditCard": "O campo {{#label}} deve ser um número de cartão válido.",
+
+    "number.base": "O campo {{#label}} não é um número.",
+    "number.integer": "O campo {{#label}} não é um número inteiro válido.",
+    "number.greater": "O campo {{label}} deve ser maior que {{limit}}",
+    "number.less": "O campo {{#label}} deve ser menor que {{#limit}}",
+    "number.positive": "O campo {{#label}} deve ser um número positivo",
+    "number.negative": "O campo {{#label}} deve ser um número negativo",
+    
+    "any.required": "O campo {{#label}} não pode ser vazio.",
+    "any.empty": "O campo {{#label}} não pode ser vazio."
+}

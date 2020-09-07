@@ -1,0 +1,46 @@
+version: '3'
+services:
+
+  dbmysql:
+    image: mysql:5.7
+    ports:
+      - 3306:3306
+    environment:
+      MYSQL_ALLOW_EMPTY_PASSWORD: 1
+    volumes:
+      - "../.dockerdata/mysql:/var/lib/mysql"
+
+  phpmyadmin:
+    image: phpmyadmin/phpmyadmin
+    container_name: dev_pma
+    links:
+      - dbmysql
+    depends_on:
+      - dbmysql
+    environment:
+      PMA_HOST: dbmysql
+      PMA_PORT: 3306
+      PMA_ARBITRARY: 1
+    restart: always
+    ports:
+      - 8080:80
+
+  api:
+    build: 
+      context: .
+      dockerfile: dockerfile
+    ports: 
+      - 3000:3000
+    environment:
+      NODE_ENV: "development"
+    volumes:
+      - ".:/api-boticario"
+      - "./node_modules:/api-boticario/node_modules"
+    command: ./scripts/wait-for-it.sh -t 10 127.0.0.1:3306 -- ./scripts/migrate.sh 
+    command: npm install
+    command: npm audit fix
+    command: npm start
+    links:
+      - dbmysql
+    depends_on:
+      - dbmysql
