@@ -84,28 +84,9 @@ Listagem de Pedidos
 
 ```sh
 
-POST (Cadastro de Pedido)
-http://localhost:9000/resellers
-{
-    "id": 2,
-    "price": "330.20",
-    "data": "27/08/2020",
-    "cpf": "15350946056"
-}
+GET 
+http://localhost:9000/order/
 ```
-
-
-
-
-
-## Exemplo de uso
-
-Alguns exemplos interessantes e úteis sobre como seu projeto pode ser utilizado. Adicione blocos de códigos e, se necessário, screenshots.
-
-_Para mais exemplos, consulte a [Wiki][wiki]._ 
-
-## Configuração para Desenvolvimento
-`
 
 
 [npm-image]: https://img.shields.io/npm/v/datadog-metrics.svg?style=flat-square
